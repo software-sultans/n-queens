@@ -41,6 +41,18 @@ public class ClasaUtilitara {
         return conflicts;
     }
 
+    public static boolean hasDuplicates(int[] board)
+    {
+        int frecventa[]=new int[Main.board_Size];
+        for(int i=0;i<Main.board_Size;i++)
+        {
+            frecventa[board[i]]++;
+            if (frecventa[board[i]]>1)
+                return true;
+        }
+        return false;
+    }
+
 
 
 
